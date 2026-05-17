@@ -221,7 +221,7 @@ payback (months)      = total_training_cost / (annual_risk_reduction / 12)
 
 ## Enterprise Support
 
-[![HailBytes - Enterprise Security](https://www.hailbytes.com/hubfs/HailBytes-GitHub-Enterprise-Banner.png)](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=hailbytes-security-roi-calculator&utm_content=enterprise_banner)
+[![HailBytes - Enterprise Security](https://hailbytes.com/images/icons/hb_hb_white_horizontal.png)](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=hailbytes-security-roi-calculator&utm_content=enterprise_banner)
 
 Need SOC 2-ready managed security tooling for your compliance roadmap? **HailBytes** delivers BYOC-deployed security platforms with enterprise trust documentation.
 
