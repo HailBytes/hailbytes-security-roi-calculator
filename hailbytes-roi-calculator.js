@@ -7,7 +7,7 @@
  * @see https://hailbytes.com
  */
 
-// ─── Calculation engine ───────────────────────────────────────────────────────
+// ─── Calculation engine ────────────────────────────────────────────────────────
 
 /**
  * @typedef {Object} ROIInputs
@@ -114,6 +114,8 @@ const STYLES = `
     box-sizing: border-box;
   }
   *, *::before, *::after { box-sizing: inherit; }
+
+  :host([branding="off"]) .hb-branding { display: none; }
 
   /* ── Themes ── */
   :host([theme="dark"]), :host(.dark) {
@@ -486,7 +488,7 @@ const STYLES = `
   .empty-results .icon { font-size: 2.5rem; margin-bottom: .75rem; }
 `;
 
-// ─── Template builder ─────────────────────────────────────────────────────────
+// ─── Template builder ───────────────────────────────────────────────────────
 
 function buildTemplate() {
   return `
@@ -497,7 +499,7 @@ function buildTemplate() {
         <div class="logo-mark">📊</div>
         <div class="header-text">
           <h2>Security Awareness ROI Calculator</h2>
-          <p>by <a href="https://hailbytes.com" target="_blank" rel="noopener" style="color:#ff6b35;text-decoration:none">HailBytes</a> — estimate the ROI of security training</p>
+          <p class="hb-branding">by <a href="https://hailbytes.com" target="_blank" rel="noopener" style="color:#ff6b35;text-decoration:none">HailBytes</a> — estimate the ROI of security training</p>
         </div>
       </div>
 
@@ -614,7 +616,7 @@ function buildTemplate() {
 // ─── Web Component ────────────────────────────────────────────────────────────
 
 class HailbytesROICalculator extends HTMLElement {
-  static get observedAttributes() { return ['theme']; }
+  static get observedAttributes() { return ['theme', 'branding']; }
 
   constructor() {
     super();
@@ -647,7 +649,7 @@ class HailbytesROICalculator extends HTMLElement {
     return calculateROI(inputs);
   }
 
-  // ── Event binding ────────────────────────────────────────────────────────
+  // ── Event binding ───────────────────────────────────────────────────────
   _bindEvents() {
     const root = this._shadow;
 
@@ -696,7 +698,7 @@ class HailbytesROICalculator extends HTMLElement {
     });
   }
 
-  // ── Navigation ───────────────────────────────────────────────────────────
+  // ── Navigation ──────────────────────────────────────────────────────────────
   _goToTab(index) {
     const root = this._shadow;
     this._currentTab = index;
@@ -728,7 +730,7 @@ class HailbytesROICalculator extends HTMLElement {
     }
   }
 
-  // ── Validation ───────────────────────────────────────────────────────────
+  // ── Validation ────────────────────────────────────────────────────────────
   _getTabFields(tabIndex) {
     const fieldMap = {
       0: ['employee_count', 'avg_salary', 'incidents_per_year', 'avg_incident_cost'],
@@ -788,7 +790,7 @@ class HailbytesROICalculator extends HTMLElement {
     return valid;
   }
 
-  // ── Calculation ──────────────────────────────────────────────────────────
+  // ── Calculation ────────────────────────────────────────────────────────────
   _collectInputs() {
     const g = (id) => parseFloat(this._shadow.getElementById(id)?.value) || 0;
     const empCount = g('employee_count');
@@ -869,7 +871,7 @@ class HailbytesROICalculator extends HTMLElement {
     }));
   }
 
-  // ── Results rendering ────────────────────────────────────────────────────
+  // ── Results rendering ──────────────────────────────────────────────────────
   _renderResults(r) {
     const container = this._shadow.getElementById('results-content');
     if (!container) return;
@@ -981,7 +983,7 @@ class HailbytesROICalculator extends HTMLElement {
         </div>
       </div>
 
-      <div class="results-cta">
+      <div class="results-cta hb-branding">
         <p>Want to see a detailed proposal for your organization?</p>
         <a class="cta-link" href="https://hailbytes.com" target="_blank" rel="noopener">
           🚀 Talk to a HailBytes Expert

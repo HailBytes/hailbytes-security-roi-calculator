@@ -1,8 +1,10 @@
 # HailBytes Security ROI Calculator
 
-> **Zero-dependency web component** for calculating the return on investment of security awareness training. Works in Hugo, React, Vue, plain HTML, or any SPA framework. No build step, no npm install, no bundler.
+> **Zero-dependency web component** for calculating the return on investment of security awareness training. Works in Hugo, React, Vue, plain HTML, or any SPA framework. Install via npm or drop in via a `<script type="module">` CDN tag.
 
+[![npm version](https://img.shields.io/npm/v/@hailbytes/security-roi-calculator.svg)](https://www.npmjs.com/package/@hailbytes/security-roi-calculator)
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](LICENSE)
+[![Zero deps](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#)
 
 ---
 
@@ -28,9 +30,32 @@ Built using the **Web Components standard** (Custom Elements + Shadow DOM):
 
 ---
 
+## Install
+
+```bash
+npm install @hailbytes/security-roi-calculator
+```
+
+Or use it without a bundler via a CDN (see below).
+
 ## Quick Start
 
-### 1. Plain HTML / Hugo / Static Sites
+### 1. npm (bundlers, Next.js, Vite, Webpack, etc.)
+
+```js
+// Side-effect import registers the <hailbytes-roi-calculator> custom element.
+import '@hailbytes/security-roi-calculator';
+
+// Or import the pure DOM-free calculator:
+import { calculateROI } from '@hailbytes/security-roi-calculator';
+console.log(calculateROI({ /* inputs */ }).netBenefit);
+```
+
+```html
+<hailbytes-roi-calculator theme="dark"></hailbytes-roi-calculator>
+```
+
+### 2. Plain HTML / Hugo / Static Sites
 
 ```html
 <!-- Load the component -->
@@ -39,13 +64,19 @@ Built using the **Web Components standard** (Custom Elements + Shadow DOM):
 <!-- Use it anywhere on the page -->
 <hailbytes-roi-calculator></hailbytes-roi-calculator>
 
-<!-- Dark theme -->
-<hailbytes-roi-calculator theme="dark"></hailbytes-roi-calculator>
+<!-- Dark theme, white-label (no HailBytes branding) -->
+<hailbytes-roi-calculator theme="dark" branding="off"></hailbytes-roi-calculator>
 ```
 
-### 2. Via CDN (jsDelivr — no download needed)
+### 3. Via CDN (jsDelivr — no download needed)
 
 ```html
+<!-- From npm via jsDelivr (recommended — version-pinned) -->
+<script type="module"
+  src="https://cdn.jsdelivr.net/npm/@hailbytes/security-roi-calculator/hailbytes-roi-calculator.js">
+</script>
+
+<!-- Or directly from GitHub main (always latest) -->
 <script type="module"
   src="https://cdn.jsdelivr.net/gh/HailBytes/hailbytes-security-roi-calculator@main/hailbytes-roi-calculator.js">
 </script>
@@ -53,7 +84,7 @@ Built using the **Web Components standard** (Custom Elements + Shadow DOM):
 <hailbytes-roi-calculator theme="dark"></hailbytes-roi-calculator>
 ```
 
-### 3. React / Vue
+### 4. React / Vue
 
 ```js
 // In your entry point or component file:
@@ -97,9 +128,10 @@ const onResult = (e) => console.log(e.detail);
 
 ### Attributes
 
-| Attribute | Values              | Default   | Description              |
-|-----------|---------------------|-----------|--------------------------|
-| `theme`   | `"light"` / `"dark"` | `"light"` | Color theme              |
+| Attribute  | Values              | Default   | Description                                       |
+|------------|---------------------|-----------|---------------------------------------------------|
+| `theme`    | `"light"` / `"dark"` | `"light"` | Color theme                                       |
+| `branding` | `"off"`             | _(shown)_ | Hide the "by HailBytes" header line and CTA       |
 
 ### Custom Events
 
@@ -204,6 +236,17 @@ payback (months)      = total_training_cost / (annual_risk_reduction / 12)
 ```
 
 **Platform licensing default:** $15 per user per year (industry average for security awareness platforms). Auto-populated when employee count is entered; can be overridden.
+
+---
+
+## See also
+
+Part of the HailBytes calculator suite — drop-in web components for security and risk:
+
+- [`@hailbytes/security-roi-calculator`](https://www.npmjs.com/package/@hailbytes/security-roi-calculator) — security awareness training ROI _(this package)_
+- [`@hailbytes/password-analyzer`](https://www.npmjs.com/package/@hailbytes/password-analyzer) — password strength + entropy analyzer ([repo](https://github.com/HailBytes/hailbytes-password-analyzer))
+- [`@hailbytes/pentest-calculator`](https://www.npmjs.com/package/@hailbytes/pentest-calculator) — penetration testing scope and cost estimator ([repo](https://github.com/HailBytes/hailbytes-pentest-calculator))
+- [`@hailbytes/vulnerability-calculator`](https://www.npmjs.com/package/@hailbytes/vulnerability-calculator) — vulnerability scanner infrastructure sizing ([repo](https://github.com/HailBytes/hailbytes-vulnerability-calculator))
 
 ---
 
