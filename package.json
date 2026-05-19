@@ -43,10 +43,10 @@
   "license": "MPL-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HailBytes/hailbytes-security-roi-calculator.git"
+    "url": "git+https://github.com/HailBytes/security-roi-calculator.git"
   },
   "bugs": {
-    "url": "https://github.com/HailBytes/hailbytes-security-roi-calculator/issues"
+    "url": "https://github.com/HailBytes/security-roi-calculator/issues"
   },
   "homepage": "https://hailbytes.com",
   "engines": {
