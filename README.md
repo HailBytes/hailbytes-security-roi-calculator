@@ -78,7 +78,7 @@ console.log(calculateROI({ /* inputs */ }).netBenefit);
 
 <!-- Or directly from GitHub main (always latest) -->
 <script type="module"
-  src="https://cdn.jsdelivr.net/gh/HailBytes/hailbytes-security-roi-calculator@main/hailbytes-roi-calculator.js">
+  src="https://cdn.jsdelivr.net/gh/HailBytes/security-roi-calculator@main/hailbytes-roi-calculator.js">
 </script>
 
 <hailbytes-roi-calculator theme="dark"></hailbytes-roi-calculator>
@@ -264,8 +264,8 @@ Part of the HailBytes calculator suite — drop-in web components for security a
 
 ## Enterprise Support
 
-[![HailBytes - Enterprise Security](https://hailbytes.com/images/icons/hb_hb_white_horizontal.png)](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=hailbytes-security-roi-calculator&utm_content=enterprise_banner)
+[![HailBytes - Enterprise Security](https://hailbytes.com/images/icons/hb_hb_white_horizontal.png)](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=security-roi-calculator&utm_content=enterprise_banner)
 
 Need SOC 2-ready managed security tooling for your compliance roadmap? **HailBytes** delivers BYOC-deployed security platforms with enterprise trust documentation.
 
-[**Get Enterprise Support ->**](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=hailbytes-security-roi-calculator&utm_content=enterprise_banner)
+[**Get Enterprise Support ->**](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=security-roi-calculator&utm_content=enterprise_banner)
