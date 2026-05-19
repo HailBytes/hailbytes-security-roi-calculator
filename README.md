@@ -3,6 +3,7 @@
 > **Zero-dependency web component** for calculating the return on investment of security awareness training. Works in Hugo, React, Vue, plain HTML, or any SPA framework. Install via npm or drop in via a `<script type="module">` CDN tag.
 
 [![npm version](https://img.shields.io/npm/v/@hailbytes/security-roi-calculator.svg)](https://www.npmjs.com/package/@hailbytes/security-roi-calculator)
+[![npm downloads](https://img.shields.io/npm/dw/%40hailbytes%2Fsecurity-roi-calculator.svg)](https://www.npmjs.com/package/@hailbytes/security-roi-calculator)
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](LICENSE)
 [![Zero deps](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/%40hailbytes%2Fsecurity-roi-calculator)](https://bundlephobia.com/package/@hailbytes/security-roi-calculator)
