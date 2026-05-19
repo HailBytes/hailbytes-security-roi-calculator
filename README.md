@@ -269,3 +269,6 @@ Part of the HailBytes calculator suite — drop-in web components for security a
 Need SOC 2-ready managed security tooling for your compliance roadmap? **HailBytes** delivers BYOC-deployed security platforms with enterprise trust documentation.
 
 [**Get Enterprise Support ->**](https://www.hailbytes.com/enterprise?utm_source=github&utm_medium=repo_readme&utm_campaign=security-roi-calculator&utm_content=enterprise_banner)
+---
+
+*Part of the [HailBytes](https://hailbytes.com) open-source security toolkit.*
