@@ -1,6 +1,6 @@
 {
   "name": "@hailbytes/security-roi-calculator",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Zero-dependency web component for calculating security awareness training ROI. Works in Hugo, React, Vue, or plain HTML.",
   "type": "module",
   "main": "./hailbytes-roi-calculator.js",
