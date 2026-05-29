@@ -7,6 +7,7 @@
 [![License: MPL-2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](LICENSE)
 [![Zero deps](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](#)
 [![Bundle Size](https://img.shields.io/bundlephobia/minzip/%40hailbytes%2Fsecurity-roi-calculator)](https://bundlephobia.com/package/@hailbytes/security-roi-calculator)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-davidhailbytes-blue?logo=linkedin&style=flat)](https://www.linkedin.com/in/davidhailbytes/)
 
 ---
 
