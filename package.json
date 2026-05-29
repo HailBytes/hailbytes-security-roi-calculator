@@ -24,7 +24,7 @@
     "./hailbytes-roi-calculator.js"
   ],
   "scripts": {
-    "test": "node --test test/smoke.test.mjs"
+    "test": "node --test test/*.test.mjs"
   },
   "keywords": [
     "roi",
